@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
+</head>
+<body>
+<div class="contain">
+    <div class="debut">
+        <div><label for="choixJ1J2">Joueur contre Joueur : </label>
+        <input type="radio" name="choix" id="choixJ1J2" checked></div> <br>
+        <div><label for="choixJ1J2">Joueur contre Ordinateur : </label>
+        <input type="radio" name="choix" id="choixJ1O"></div>   <br>
+         
+        <label for="nbrDeParties">Choissisez un nombre de parties  </label> <br>
+         <div>
+           <div><input type="radio" id="trois" name="nbrDeParties" value="3" >
+            <label for="trois">3 manches</label></div>
+          
+            <div><input type="radio" id="cinq" name="nbrDeParties" value="5" checked>
+            <label for="cinq">5 manches</label></div>   
+          
+            <div><input type="radio" id="dix" name="nbrDeParties" value="10" >
+            <label for="dix">10 manches</label><br></div>           
+        </div><br>
+            <input type="submit" value="Valider" class="valider" >
+            
+    </div></div>
+
+<div class="morpion">
+        <h1 class="titre">Jeu du morpion</h1>
+        <p>Partie n° <span class="partieActu">1 </span> / <span class="nbrDeParties"></span></p>
+        <p>Coup n° <span class="coup"> </span> / 9</p>
+        <p class="tourDJoueur"> Au tour du joueur <span class="symbole"> X</span>  </p>
+
+    <div id="jeu">   
+    <div id="0" class="case"></div>
+    <div id="1" class="case"></div>
+    <div id="2" class="case"></div>
+    <div id="3" class="case"></div>
+    <div id="4" class="case"></div>
+    <div id="5" class="case"></div>
+    <div id="6" class="case"></div>
+    <div id="7" class="case"></div>
+    <div id="8" class="case"></div>
+    </div>
+<div class="texte">
+    <h2 class="message"></h2>
+    <input type="button" value="Nouvelle Partie" id="newGame">
+    <input type="button" value="Rejouer" id="rejouer">
+    
+    <!-- <input type="button" value="Recup stat ?" id="recup"> -->
+    
+    <div>Score J1 :  <span class="j1">0</span></div><br>
+    <div>Score J2 :  <span class="j2"> 0</span></div><br>
+    <div>Score match nul : <span class="matchnul">0</span></div>
+    <h1 class="resultat"></h1>
+</div>   
+</div> 
+
+</body>
+
+</html>
