@@ -69,21 +69,28 @@ endGame();
 }
 else if(jeu===0 && choixJeuJ1O.checked){
     e.target.innerText = playerTurn; 
+   
     if(playerTurn === playerOne){
     playerTurn=playerTwo;
     grille[idCase] = "1";
     coup++;
     coups.innerHTML = coup;
-    if(coup<9 && playerTurn === playerTwo)
-    {
-        ordi();              
-    }
     win();
     draw();
+    if(coup<9 && playerTurn === playerTwo && jeu === 0)
+    {
+        
+        setTimeout(ordi,200);
+        
+       
+                 
+   }
+    
+    
     }
     endGame();
-    } 
-}
+    }}
+
 
 
 div.forEach(di => di.addEventListener("click" , jouerCase));    
@@ -103,6 +110,10 @@ function ordi(){
     coup++;
     coups.innerHTML = coup;
     playerTurn=playerOne;
+    
+    win();
+    draw();
+    endGame();
 }
 
 
